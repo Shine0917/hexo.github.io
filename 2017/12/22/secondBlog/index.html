@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="事件绑定与属性绑定：插值表达式=属性绑定 属性绑定的写法：            [属性]=”值” &amp;lt;img src=&amp;quot;{{imgUrl}}&amp;quot;&amp;gt; event.target.value  :拿到的DOM属性event.target.getAttribute（">
+<meta name="description" content="事件绑定与属性绑定：插值表达式=属性绑定 属性绑定的写法：   &amp;lt;img [src]=&amp;quot;imgUrl&amp;quot;&amp;gt; [属性]=&amp;quot;值&amp;quot;     &amp;lt;img src=&amp;quot;{{imgUrl}}&amp;quo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="secondBlog">
 <meta property="og:url" content="http://yoursite.com/2017/12/22/secondBlog/index.html">
 <meta property="og:site_name" content="Moon的博客">
-<meta property="og:description" content="事件绑定与属性绑定：插值表达式=属性绑定 属性绑定的写法：            [属性]=”值” &amp;lt;img src=&amp;quot;{{imgUrl}}&amp;quot;&amp;gt; event.target.value  :拿到的DOM属性event.target.getAttribute（’value’）: 拿到的 Html属性   注：html属性是不可改变的 Html属性与Dom属性的关系： 1">
+<meta property="og:description" content="事件绑定与属性绑定：插值表达式=属性绑定 属性绑定的写法：   &amp;lt;img [src]=&amp;quot;imgUrl&amp;quot;&amp;gt; [属性]=&amp;quot;值&amp;quot;     &amp;lt;img src=&amp;quot;{{imgUrl}}&amp;quot;&amp;gt; Html属性与Dom属性的关系：event.target.value  :拿到的DOM属性event.target.getAttribut">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-23T13:32:23.955Z">
+<meta property="og:updated_time" content="2017-12-23T13:41:37.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="secondBlog">
-<meta name="twitter:description" content="事件绑定与属性绑定：插值表达式=属性绑定 属性绑定的写法：            [属性]=”值” &amp;lt;img src=&amp;quot;{{imgUrl}}&amp;quot;&amp;gt; event.target.value  :拿到的DOM属性event.target.getAttribute（’value’）: 拿到的 Html属性   注：html属性是不可改变的 Html属性与Dom属性的关系： 1">
+<meta name="twitter:description" content="事件绑定与属性绑定：插值表达式=属性绑定 属性绑定的写法：   &amp;lt;img [src]=&amp;quot;imgUrl&amp;quot;&amp;gt; [属性]=&amp;quot;值&amp;quot;     &amp;lt;img src=&amp;quot;{{imgUrl}}&amp;quot;&amp;gt; Html属性与Dom属性的关系：event.target.value  :拿到的DOM属性event.target.getAttribut">
 
 
 
@@ -330,15 +330,20 @@
 
       
         <h3 id="事件绑定与属性绑定："><a href="#事件绑定与属性绑定：" class="headerlink" title="事件绑定与属性绑定："></a>事件绑定与属性绑定：</h3><p>插值表达式=属性绑定</p>
-<p>属性绑定的写法：<br>      <img [src]="imgUrl"><br>      [属性]=”值”</p>
-<pre><code>&lt;img src=&quot;{{imgUrl}}&quot;&gt;
-</code></pre><p>event.target.value  :拿到的DOM属性<br>event.target.getAttribute（’value’）: 拿到的 Html属性  </p>
+<p>属性绑定的写法：</p>
+<pre><code>  &lt;img [src]=&quot;imgUrl&quot;&gt;
+[属性]=&quot;值&quot;
+
+
+  &lt;img src=&quot;{{imgUrl}}&quot;&gt;
+</code></pre><h3 id="Html属性与Dom属性的关系："><a href="#Html属性与Dom属性的关系：" class="headerlink" title="Html属性与Dom属性的关系："></a>Html属性与Dom属性的关系：</h3><p>event.target.value  :拿到的DOM属性<br>event.target.getAttribute（’value’）: 拿到的 Html属性  </p>
 <p>注：html属性是不可改变的</p>
-<h3 id="Html属性与Dom属性的关系："><a href="#Html属性与Dom属性的关系：" class="headerlink" title="Html属性与Dom属性的关系："></a>Html属性与Dom属性的关系：</h3><p> 1.少量的Html属性和Dom 属性之间有1:1的映射关系  如：id<br>2.有些HTMl属性没有对应的Dom属性 ，如colspan</p>
+<p> 1.少量的Html属性和Dom 属性之间有1:1的映射关系  如：id</p>
+<p> 2.有些HTMl属性没有对应的Dom属性 ，如colspan</p>
 <p>3.有些Dom属性没有对应的Html属性，如：textContent<br>就算名字相同，Html属性h和Dom属性也不是一样</p>
 <p>4.Html属性的值指定了初始值；DOm属性的值表示当前值，<br>DOm属性的值可以改变，Html属性的值不可改变</p>
 <p>5.模板绑定是通过DOm属性和事件来工作的，，而不是Html属性</p>
-<p>事件绑定是从视图到模型<br>属性绑定是从</p>
+<p>事件绑定是从视图到模型</p>
 <p>参考链接：<a href="http://blog.csdn.net/kuangshp128/article/details/71102049" target="_blank" rel="noopener">http://blog.csdn.net/kuangshp128/article/details/71102049</a></p>
 
       
@@ -388,8 +393,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/08/FirstBlog/" rel="next" title="FirstBlog">
-                <i class="fa fa-chevron-left"></i> FirstBlog
+              <a href="/2017/12/04/OneBlog/" rel="next" title="OneBlog">
+                <i class="fa fa-chevron-left"></i> OneBlog
               </a>
             
           </div>
@@ -473,7 +478,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -481,15 +486,6 @@
 
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
             
 
           </nav>

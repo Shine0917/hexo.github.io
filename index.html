@@ -334,137 +334,21 @@
         
           
             <h3 id="事件绑定与属性绑定："><a href="#事件绑定与属性绑定：" class="headerlink" title="事件绑定与属性绑定："></a>事件绑定与属性绑定：</h3><p>插值表达式=属性绑定</p>
-<p>属性绑定的写法：<br>      <img [src]="imgUrl"><br>      [属性]=”值”</p>
-<pre><code>&lt;img src=&quot;{{imgUrl}}&quot;&gt;
-</code></pre><p>event.target.value  :拿到的DOM属性<br>event.target.getAttribute（’value’）: 拿到的 Html属性  </p>
+<p>属性绑定的写法：</p>
+<pre><code>  &lt;img [src]=&quot;imgUrl&quot;&gt;
+[属性]=&quot;值&quot;
+
+
+  &lt;img src=&quot;{{imgUrl}}&quot;&gt;
+</code></pre><h3 id="Html属性与Dom属性的关系："><a href="#Html属性与Dom属性的关系：" class="headerlink" title="Html属性与Dom属性的关系："></a>Html属性与Dom属性的关系：</h3><p>event.target.value  :拿到的DOM属性<br>event.target.getAttribute（’value’）: 拿到的 Html属性  </p>
 <p>注：html属性是不可改变的</p>
-<h3 id="Html属性与Dom属性的关系："><a href="#Html属性与Dom属性的关系：" class="headerlink" title="Html属性与Dom属性的关系："></a>Html属性与Dom属性的关系：</h3><p> 1.少量的Html属性和Dom 属性之间有1:1的映射关系  如：id<br>2.有些HTMl属性没有对应的Dom属性 ，如colspan</p>
+<p> 1.少量的Html属性和Dom 属性之间有1:1的映射关系  如：id</p>
+<p> 2.有些HTMl属性没有对应的Dom属性 ，如colspan</p>
 <p>3.有些Dom属性没有对应的Html属性，如：textContent<br>就算名字相同，Html属性h和Dom属性也不是一样</p>
 <p>4.Html属性的值指定了初始值；DOm属性的值表示当前值，<br>DOm属性的值可以改变，Html属性的值不可改变</p>
 <p>5.模板绑定是通过DOm属性和事件来工作的，，而不是Html属性</p>
-<p>事件绑定是从视图到模型<br>属性绑定是从</p>
+<p>事件绑定是从视图到模型</p>
 <p>参考链接：<a href="http://blog.csdn.net/kuangshp128/article/details/71102049" target="_blank" rel="noopener">http://blog.csdn.net/kuangshp128/article/details/71102049</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/08/FirstBlog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xzx">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Moon的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/08/FirstBlog/" itemprop="url">FirstBlog</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-08T16:12:43+08:00">
-                2017-12-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<h3 id="王伟峰"><a href="#王伟峰" class="headerlink" title="王伟峰"></a>王伟峰</h3><h4 id="肖朝霞"><a href="#肖朝霞" class="headerlink" title="肖朝霞"></a>肖朝霞</h4><p><code>System.out.println(&quot;我是帅胖胖&quot;)</code> </p>
 
           
         
@@ -798,7 +682,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -806,15 +690,6 @@
 
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
             
 
           </nav>
