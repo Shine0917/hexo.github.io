@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Web前端 Angular," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="#响应式编程 表单处理模板式表单：表单的数据模型是通过组件模板中的相关指令来定义的，因为使用这种方式定义表单的数据模型时，我们会受限于HTML的语法，所以，模板驱动方式只适合用于一些简单的场景。 响应式表单：使用响应式表单时，你通过编写Typescript代码而不是HTML代码来创建一个底层的数据模型， 在这个模型定义">
-<meta name="keywords" content="Web前端 Angular">
+<meta name="description" content="重定向路由在用户访问一个特定的地址时，将其重定向到另一个指定的地址 子路由">
 <meta property="og:type" content="article">
-<meta property="og:title" content="响应式编程">
-<meta property="og:url" content="http://yoursite.com/2017/12/23/响应式编程/index.html">
+<meta property="og:title" content="Moon的博客">
+<meta property="og:url" content="http://yoursite.com/2017/12/27/Angular 路由/index.html">
 <meta property="og:site_name" content="Moon的博客">
-<meta property="og:description" content="#响应式编程 表单处理模板式表单：表单的数据模型是通过组件模板中的相关指令来定义的，因为使用这种方式定义表单的数据模型时，我们会受限于HTML的语法，所以，模板驱动方式只适合用于一些简单的场景。 响应式表单：使用响应式表单时，你通过编写Typescript代码而不是HTML代码来创建一个底层的数据模型， 在这个模型定义好以后，你使用一些特定的指令，将模板上的html元素与底层的数据模型连接在一起。">
+<meta property="og:description" content="重定向路由在用户访问一个特定的地址时，将其重定向到另一个指定的地址 子路由">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-08T13:32:36.076Z">
+<meta property="og:updated_time" content="2017-12-27T13:58:29.792Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="响应式编程">
-<meta name="twitter:description" content="#响应式编程 表单处理模板式表单：表单的数据模型是通过组件模板中的相关指令来定义的，因为使用这种方式定义表单的数据模型时，我们会受限于HTML的语法，所以，模板驱动方式只适合用于一些简单的场景。 响应式表单：使用响应式表单时，你通过编写Typescript代码而不是HTML代码来创建一个底层的数据模型， 在这个模型定义好以后，你使用一些特定的指令，将模板上的html元素与底层的数据模型连接在一起。">
+<meta name="twitter:title" content="Moon的博客">
+<meta name="twitter:description" content="重定向路由在用户访问一个特定的地址时，将其重定向到另一个指定的地址 子路由">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/23/响应式编程/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/27/Angular 路由/"/>
 
 
 
 
 
-  <title>响应式编程 | Moon的博客</title>
+  <title> | Moon的博客</title>
   
 
 
@@ -263,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/23/响应式编程/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/27/Angular 路由/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xzx">
@@ -280,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">响应式编程</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -292,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-23T21:48:40+08:00">
-                2017-12-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-27T21:46:08+08:00">
+                2017-12-27
               </time>
             
 
@@ -330,62 +329,8 @@
       
 
       
-        <p>#响应式编程</p>
-<h4 id="表单处理"><a href="#表单处理" class="headerlink" title="表单处理"></a>表单处理</h4><p>模板式表单：表单的数据模型是通过组件模板中的相关指令来定义的，因为使用这种方式定义表单的数据模型时，我们会受限于HTML的语法，所以，模板驱动方式只适合用于一些简单的场景。</p>
-<p>响应式表单：使用响应式表单时，你通过编写Typescript代码而不是HTML代码来创建一个底层的数据模型，</p>
-<p>在这个模型定义好以后，你使用一些特定的指令，将模板上的html元素与底层的数据模型连接在一起。</p>
-<p>不管是哪种表单，都有一个对应的数据模型来存储表单的数据。在模板式表单中，数据模型是由angular基于你组件模板中的指令隐式创建的，而在响应式表单中，你通过编码明确的创建数据模型然后将模板上的html元素与底层的数据模型连接在一起</p>
-<p>表单验证：</p>
-<h4 id="模板式表单"><a href="#模板式表单" class="headerlink" title="模板式表单"></a>模板式表单</h4><p>NgForm 隐式创建一个 FormGroup       在ngForm里面使用ngModel  , 不需要给ngModel加括号</p>
-<p>NgModel                       FormControl</p>
-<p>NgModelGroup</p>
-<h4 id="响应式表单"><a href="#响应式表单" class="headerlink" title="响应式表单"></a>响应式表单</h4><p><strong>响应式表单指令</strong></p>
-<table>
-<thead>
-<tr>
-<th>类名</th>
-<th>指令</th>
-<th>指令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>FormGroup</td>
-<td>formGroup</td>
-<td>formGroupName</td>
-</tr>
-<tr>
-<td>FormControl构成表单的基本元素</td>
-<td>formControl只能在FormModel外面使用，要是在里面使用则有formControlName</td>
-<td>formControlName</td>
-</tr>
-<tr>
-<td>FormArray 可以增长的数据集合</td>
-<td></td>
-<td>formArrayName</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>以name结尾</li>
-</ul>
-<ol>
-<li>不需要使用属性绑定，只需要指定属性的名字即可</li>
-<li>只能用在FormGroup 里面</li>
-</ol>
-<ul>
-<li>不以name结尾</li>
-</ul>
-<p>则需要属性绑定的方括号 [] ,</p>
-<h3 id="校验器"><a href="#校验器" class="headerlink" title="校验器"></a>校验器</h3><p>XXXX(control:AbstractControl):{[key:string]:any}{</p>
-<p>Validators.</p>
-<p>return null;</p>
-<p>}</p>
-<h3 id="异步校验器"><a href="#异步校验器" class="headerlink" title="异步校验器"></a>异步校验器</h3><p>AsyncValidator </p>
-<h3 id="状态字段"><a href="#状态字段" class="headerlink" title="状态字段"></a>状态字段</h3><p>touchd和untouched  是否获取过焦点</p>
-<p>pristine和dirty  值未被改变：prestine是true</p>
-<p>pending   异步校验时 为true</p>
-
+        <h3 id="重定向路由"><a href="#重定向路由" class="headerlink" title="重定向路由"></a>重定向路由</h3><p>在用户访问一个特定的地址时，将其重定向到另一个指定的地址</p>
+<h3 id="子路由"><a href="#子路由" class="headerlink" title="子路由"></a>子路由</h3>
       
     </div>
     
@@ -424,12 +369,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Web前端-Angular/" rel="tag"># Web前端 Angular</a>
-          
-        </div>
-      
 
       
       
@@ -439,8 +378,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/22/secondBlog/" rel="next" title="secondBlog">
-                <i class="fa fa-chevron-left"></i> secondBlog
+              <a href="/2017/12/25/Angular项目实战/" rel="next" title="Angular项目实战">
+                <i class="fa fa-chevron-left"></i> Angular项目实战
               </a>
             
           </div>
@@ -449,8 +388,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/25/模板表单验证/" rel="prev" title="模板表单验证">
-                模板表单验证 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/07/组件生命周期钩子/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -576,7 +515,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#表单处理"><span class="nav-number">1.</span> <span class="nav-text">表单处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模板式表单"><span class="nav-number">2.</span> <span class="nav-text">模板式表单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应式表单"><span class="nav-number">3.</span> <span class="nav-text">响应式表单</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验器"><span class="nav-number"></span> <span class="nav-text">校验器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步校验器"><span class="nav-number"></span> <span class="nav-text">异步校验器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#状态字段"><span class="nav-number"></span> <span class="nav-text">状态字段</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#重定向路由"><span class="nav-number">1.</span> <span class="nav-text">重定向路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子路由"><span class="nav-number">2.</span> <span class="nav-text">子路由</span></a></li></ol></div>
             
 
           </div>

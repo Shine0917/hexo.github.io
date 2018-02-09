@@ -262,6 +262,946 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/08/Typescript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xzx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Moon的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/08/Typescript/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-08T11:32:46+08:00">
+                2018-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="字符串新特性"><a href="#字符串新特性" class="headerlink" title="字符串新特性"></a>字符串新特性</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> content = <span class="string">`aaa   //多行字符串</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">vvvv</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Fgsfh</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myName = <span class="string">"zhai liang"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"zhai liang"</span>;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;myname&#125;</span>`</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;getName()&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`&lt;div&gt;</span></span><br><span class="line"><span class="string">&lt;span&gt;<span class="subst">$&#123;myname&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">&lt;span&gt;<span class="subst">$&#123;getName&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">&lt;div&gt;XXX&lt;/div&gt;                //字符串模板</span></span><br><span class="line"><span class="string">&lt;/div&gt;`</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function test (template,name,age)&#123;</span><br><span class="line">  console.log(template);</span><br><span class="line">  console.log(name);</span><br><span class="line">  console.log(age);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>用来声明匿名函数，消除传统匿名函数的this指针问题</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = <span class="function">(<span class="params">arg1, arg2</span>) =&gt;</span> &#123;</span><br><span class="line">  arg1 + arg2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myArray = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="built_in">console</span>.log(myArray.filter(<span class="function"><span class="params">value</span> =&gt;</span> value%<span class="number">2</span> == <span class="number">0</span>));</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStock</span>(<span class="params">name:<span class="built_in">string</span></span>)</span>&#123; <span class="comment">//传统的写法</span></span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">  </span><br><span class="line">  setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"name is:"</span> + <span class="keyword">this</span>.name); </span><br><span class="line">  &#125;,<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> stock = <span class="keyword">new</span> getStock(<span class="string">"IBM"</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStock2</span>(<span class="params">name:<span class="built_in">string</span></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = nmae;</span><br><span class="line">  </span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"name is:"</span> + <span class="keyword">this</span>.name);</span><br><span class="line">  &#125;,<span class="number">1000</span>); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> stock = getStock2(<span class="string">"IBM"</span>);</span><br></pre></td></tr></table></figure>
+<p>for … in  循环.   与 for…of  </p>
+<ol>
+<li>推荐在循环对象属性的时候，使用<code>for...in</code>,在遍历数组的时候的时候使用<code>for...of</code>。</li>
+<li><code>for...in</code>循环出的是key，<code>for...of</code>循环出的是value</li>
+<li>注意，<code>for...of</code>是ES6新引入的特性。修复了ES5引入的<code>for...in</code>的不足,</li>
+<li><code>for...of</code>不能循环普通的对象，需要通过和<code>Object.keys()</code>搭配使用</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArray = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">maArray.desc = <span class="string">"four number"</span>;</span><br><span class="line">myArray.forEach(<span class="function"><span class="params">value</span> =&gt;</span> <span class="built_in">console</span>.log(value));</span><br><span class="line"></span><br><span class="line">**forEach 会忽略属性值  而且不能<span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myArray = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">myArray.desc = <span class="string">"four number"</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> n <span class="keyword">in</span> myArray) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(myArray[n]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> n of myArray)&#123;</span><br><span class="line">  <span class="keyword">if</span>(n&gt;<span class="number">2</span>) <span class="keyword">break</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>类（class）是 TYpescript的核心，使用Typescript开发时，大部分代码是写在类里面的</p>
+<h4 id="类的声明"><a href="#类的声明" class="headerlink" title="类的声明"></a>类的声明</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Person &#123;</span><br><span class="line">  name;</span><br><span class="line">  </span><br><span class="line">  eat()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"im eating"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</span><br><span class="line">p1.name = <span class="string">"batman"</span>;</span><br><span class="line">p1.eat();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> Person();</span><br><span class="line">p2.name = <span class="string">"superman"</span>;</span><br><span class="line">p2.eat();</span><br></pre></td></tr></table></figure>
+<h4 id="类的构造函数"><a href="#类的构造函数" class="headerlink" title="类的构造函数"></a>类的构造函数</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Person &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">constructor</span>(<span class="params"><span class="keyword">public</span> name:<span class="built_in">string</span></span>)&#123;</span><br><span class="line">	&#125;	</span><br><span class="line">  </span><br><span class="line">  eat()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"im eating"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Employee <span class="keyword">extends</span> Person &#123;</span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params">name: <span class="built_in">string</span>, code: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="keyword">super</span>(name);</span><br><span class="line">    <span class="keyword">this</span>.code = code;</span><br><span class="line">  &#125;</span><br><span class="line">  code: <span class="built_in">string</span>;</span><br><span class="line">  work() &#123;</span><br><span class="line">    <span class="keyword">super</span>.eat();</span><br><span class="line">    <span class="keyword">this</span>.doWork();</span><br><span class="line">  &#125;</span><br><span class="line">  doWork()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"im working"</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> e1 = <span class="keyword">new</span> Employee(<span class="string">"name"</span>,<span class="string">"1"</span>)</span><br><span class="line">e1.work();</span><br></pre></td></tr></table></figure>
+<h3 id="范型"><a href="#范型" class="headerlink" title="范型"></a>范型</h3><h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>用来建立某种代码约定。使得其它开发者在调用某个方法或创建新的类时必须遵循所定义的代码约定</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> IPerson &#123;  接口声明属性</span><br><span class="line">  name:<span class="built_in">string</span>;</span><br><span class="line">  age:<span class="built_in">number</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> Person&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params"><span class="keyword">public</span> config: IPerson</span>) &#123;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Person (&#123;</span><br><span class="line">  name: <span class="string">"zhangsan"</span>,</span><br><span class="line">  age: <span class="number">18</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Animal&#123;</span><br><span class="line">  eat();</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Sheep <span class="keyword">implements</span> Animal &#123;</span><br><span class="line">  eat()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"i eat grass"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Tiger <span class="keyword">implements</span> Animal &#123;</span><br><span class="line">  eat()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"i eat meat"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>模块可以帮助开发者将代码分割为可重用的单元。开发者可以自己决定将模块中的哪些资源（类 方法 变量）暴露出去供外部使用，哪些资源只在模块内使用</p>
+<p>只能import 别的文件 export的</p>
+<h4 id="类型定义文件"><a href="#类型定义文件" class="headerlink" title="类型定义文件"></a>类型定义文件</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/07/Es6语法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xzx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Moon的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/07/Es6语法/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:53:25+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><p>基于es6的   Vue. Element.  D3.js</p>
+<h3 id="数组解构"><a href="#数组解构" class="headerlink" title="数组解构"></a>数组解构</h3><p>对象解构</p>
+<p>字符串解构</p>
+<p>布尔值解构  boolean</p>
+<p>函数参数解构</p>
+<p>数值解构</p>
+<p>解构赋值：<br>数组，对象，字符串</p>
+<p>布尔值 函数参数 数值</p>
+<p>左右进行赋值 类型一样</p>
+<p>静态方法通过类来调用，而不是通过类的实例来调用</p>
+<p>静态属性在类定义完之后，直接在类上定义</p>
+<p>iterator接口</p>
+<p>for of 的循环过程就是不断调用iterator接口</p>
+<p>decorator 函数  修改类行为  只是范畴内有用</p>
+<p>constructor(private productService:ProductService){</p>
+<p>}   属性：productService  类型：ProductService</p>
+<p>数据类型：(number  string boolean)  原始类型</p>
+<p> undefined null  </p>
+<p>object 合成类型  因为一个对象是多个原始类型的值的合成</p>
+<p>对象可以分成三个子类型   （狭义的对象。 数组。函数）</p>
+<p>三种方法来检测是什么类型</p>
+<p>typeof  返回一个值的数据类型</p>
+<p>instanceof   可以区分数组和对象</p>
+<p>Object.prototype.toString</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/21/web服务器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xzx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Moon的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/21/web服务器/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-21T16:12:06+08:00">
+                2018-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="使用Nodejs创建服务器"><a href="#使用Nodejs创建服务器" class="headerlink" title="使用Nodejs创建服务器"></a>使用Nodejs创建服务器</h3><p>使用Express创建restful的http服务</p>
+<p>监控服务器文件的变化</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/07/组件生命周期钩子/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xzx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Moon的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/07/组件生命周期钩子/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-07T19:40:36+08:00">
+                2018-01-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="生命周期执行顺序"><a href="#生命周期执行顺序" class="headerlink" title="生命周期执行顺序"></a>生命周期执行顺序</h3><p>constructor</p>
+<p>ngOnChanges</p>
+<p>ngOnInit</p>
+<p>ngDoCheck</p>
+<p>ngAfterContentInit</p>
+<p>ngAfterContentChecked</p>
+<p>ngAfterViewInit</p>
+<p>ngAfterViewChecked</p>
+<p>ngDo</p>
+<p>父子组件之间应该避免直接访问彼此的内部，而应该通过输入输出属性来通讯</p>
+<p>组件可以通过输出属性发射自定义事件，这些事件可以携带任何你想携带的数据</p>
+<p>在没有父子关系的组件之间，尽量使用中间人模式进行通讯</p>
+<p>父组件可以在运行时投影一个或多个模板片段到子组件中</p>
+<p>每个Angular组件都提供了一组生命周期钩子，供你在某些特定的事件发生时执行相应的逻辑</p>
+<p>angular的变更检测机制会监控组件属性的变化并自动更新视图。这个检测非常频繁并且默认是针对整个组件树的，所以实现相关钩子时要慎重</p>
+<p>你可以标记你的组件树中的一个分支，使其被排除在变更检测机制之外</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/27/Angular 路由/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xzx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Moon的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/27/Angular 路由/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-27T21:46:08+08:00">
+                2017-12-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="重定向路由"><a href="#重定向路由" class="headerlink" title="重定向路由"></a>重定向路由</h3><p>在用户访问一个特定的地址时，将其重定向到另一个指定的地址</p>
+<h3 id="子路由"><a href="#子路由" class="headerlink" title="子路由"></a>子路由</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/25/Angular项目实战/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xzx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Moon的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/25/Angular项目实战/" itemprop="url">Angular项目实战</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-25T16:25:52+08:00">
+                2017-12-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="开发准备"><a href="#开发准备" class="headerlink" title="开发准备"></a>开发准备</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>1.在项目目录下：</p>
+<p>安装第三方依赖库：npm install jquery –save</p>
+<p>npm install bootstrap ——save</p>
+<p>2.在.angular.cli.json中 添加</p>
+<p>“Style”:[</p>
+<p>“styles.css”,</p>
+<p>​        “../node_modules/bootstrap/dist/css/bootstrap.css”</p>
+<p>]</p>
+<p>“scripts”: [</p>
+<p>​        “../node_modules/jquery/dist/jquery.js”,</p>
+<p>​        “../node_modules/bootstrap/dist/bootstrap.js”</p>
+<p>​      ],</p>
+<p>3.在typescript中不能编译 $ , 需要安装 npm install @types/jquery –save-dev</p>
+<p>npm install @types/bootstrap –save-dev</p>
+<p>安装的目的是让typescript识别jquery，bootstrap</p>
+<h3 id="组件可重用性非常重要"><a href="#组件可重用性非常重要" class="headerlink" title="组件可重用性非常重要"></a>组件可重用性非常重要</h3><h3 id="依赖注入：一种设计模式"><a href="#依赖注入：一种设计模式" class="headerlink" title="依赖注入：一种设计模式"></a>依赖注入：一种设计模式</h3><h4 id="什么是依赖注入模式及使用依赖注入的好处"><a href="#什么是依赖注入模式及使用依赖注入的好处" class="headerlink" title="什么是依赖注入模式及使用依赖注入的好处"></a>什么是依赖注入模式及使用依赖注入的好处</h4><p>依赖注入：Dependency Injection  简称 DI     控制反转：Inversion of Control 简称 IOC</p>
+<p>A依赖B，B可以依赖注入，而不需要自己</p>
+<p>一种松耦合的，可重用性，可测试性</p>
+<p>在@ngModule({</p>
+<p>Providers:[ProductService]</p>
+<p>Providers里是需要依赖注入的</p>
+<p>})</p>
+<h4 id="介绍Angular的依赖注入实现注入器和提供器"><a href="#介绍Angular的依赖注入实现注入器和提供器" class="headerlink" title="介绍Angular的依赖注入实现注入器和提供器"></a>介绍Angular的依赖注入实现注入器和提供器</h4><p>注入器    constructor(private productService: ProductService){}</p>
+<p>提供器： providers: [ProductService]</p>
+<p>使用工厂和值声明提供器</p>
+<p>工厂方法只适用单例对象</p>
+<p>注入器的层级关系</p>
+<p>输入属性：只能在有父子关系的，从父组件向子组件传递数据</p>
+<p>通过路由像组件传递数据   re</p>
+<p>EventEmit发射数据  是RXJS里的一个方法</p>
+<p>即可以发布也可以订阅</p>
+<p>子组件向外发射</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/25/模板表单验证/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xzx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Moon的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/25/模板表单验证/" itemprop="url">模板表单验证</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-25T15:57:01+08:00">
+                2017-12-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><p>在模板式表单中，指令是唯一可以用的</p>
+<p>directive</p>
+<p>指令相当于没有模板的组件</p>
+<p>selector：’[]’</p>
+<p>作为HTML的属性来用</p>
+<p>一：Angualr的校验器写法：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">XXXX（control:AbstractControl）: &#123;[key:<span class="built_in">string</span>]:<span class="built_in">any</span>&#125; &#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>二：angular 预定义好的校验器：</p>
+<p>Validator.minlength</p>
+<p>required, max length 等</p>
+<p>:happy:</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/23/响应式编程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -334,7 +1274,15 @@
         
           
             <p>#响应式编程</p>
-<p><strong>响应式表单指令</strong></p>
+<h4 id="表单处理"><a href="#表单处理" class="headerlink" title="表单处理"></a>表单处理</h4><p>模板式表单：表单的数据模型是通过组件模板中的相关指令来定义的，因为使用这种方式定义表单的数据模型时，我们会受限于HTML的语法，所以，模板驱动方式只适合用于一些简单的场景。</p>
+<p>响应式表单：使用响应式表单时，你通过编写Typescript代码而不是HTML代码来创建一个底层的数据模型，</p>
+<p>在这个模型定义好以后，你使用一些特定的指令，将模板上的html元素与底层的数据模型连接在一起。</p>
+<p>不管是哪种表单，都有一个对应的数据模型来存储表单的数据。在模板式表单中，数据模型是由angular基于你组件模板中的指令隐式创建的，而在响应式表单中，你通过编码明确的创建数据模型然后将模板上的html元素与底层的数据模型连接在一起</p>
+<p>表单验证：</p>
+<h4 id="模板式表单"><a href="#模板式表单" class="headerlink" title="模板式表单"></a>模板式表单</h4><p>NgForm 隐式创建一个 FormGroup       在ngForm里面使用ngModel  , 不需要给ngModel加括号</p>
+<p>NgModel                       FormControl</p>
+<p>NgModelGroup</p>
+<h4 id="响应式表单"><a href="#响应式表单" class="headerlink" title="响应式表单"></a>响应式表单</h4><p><strong>响应式表单指令</strong></p>
 <table>
 <thead>
 <tr>
@@ -350,12 +1298,12 @@
 <td>formGroupName</td>
 </tr>
 <tr>
-<td>FormControl</td>
-<td>formControl</td>
+<td>FormControl构成表单的基本元素</td>
+<td>formControl只能在FormModel外面使用，要是在里面使用则有formControlName</td>
 <td>formControlName</td>
 </tr>
 <tr>
-<td>FormArray</td>
+<td>FormArray 可以增长的数据集合</td>
 <td></td>
 <td>formArrayName</td>
 </tr>
@@ -365,13 +1313,17 @@
 <li>以name结尾</li>
 </ul>
 <ol>
-<li>不需要使用属性绑定，只需要给定属性的名字即可</li>
+<li>不需要使用属性绑定，只需要指定属性的名字即可</li>
 <li>只能用在FormGroup 里面</li>
 </ol>
 <ul>
 <li>不以name结尾</li>
 </ul>
 <p>则需要属性绑定的方括号 [] ,</p>
+<h3 id="校验器"><a href="#校验器" class="headerlink" title="校验器"></a>校验器</h3><p>XXXX(control:AbstractControl):{[key:string]:any}{</p>
+<p>Validators.</p>
+<p>return null;</p>
+<p>}</p>
 <h3 id="异步校验器"><a href="#异步校验器" class="headerlink" title="异步校验器"></a>异步校验器</h3><p>AsyncValidator </p>
 <h3 id="状态字段"><a href="#状态字段" class="headerlink" title="状态字段"></a>状态字段</h3><p>touchd和untouched  是否获取过焦点</p>
 <p>pristine和dirty  值未被改变：prestine是true</p>
@@ -669,137 +1621,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/04/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xzx">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Moon的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/04/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T09:07:09+08:00">
-                2017-12-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -843,7 +1671,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -895,7 +1723,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
